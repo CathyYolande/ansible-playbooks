@@ -1,0 +1,10 @@
+---
+users:
+  - name: "qa-user"
+    password: "{{  'qa' | password_hash('sha512')  }}"
+
+  - name: "prod-user"
+    password: "{{  'prod' | password_hash('sha512')  }}"
+  
+  - name: "dev-user"
+    password: "{{  'devops' | password_hash('sha512')  }}"
