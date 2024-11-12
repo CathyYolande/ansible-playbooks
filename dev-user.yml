@@ -1,0 +1,14 @@
+---
+- name: Create users on Ansible managed servers
+  hosts: ws   # specify hosts or groups to target
+  become: yes  # become root to create users
+
+  tasks:
+    - name: Ensure user is present
+      user:
+        name: "dev-user"            # Replace with the username you want to create
+        state: "present"
+          #groups: "sudo"             # Optional: specify groups
+        create_home: yes           # Optional: create home directory
+        shell: "/bin/bash"         # Optional: specify shell
+        password: "{{ 'devops' | password_hash('sha512') }}"  # Replace 'password' with the actual password, hashed for security

@@ -1,0 +1,276 @@
+2024-10-29 08:12:35,529 p=20961 u=ec2-user n=ansible | 172.31.20.238 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.20.238 port 22: No route to host",
+    "unreachable": true
+}
+2024-10-29 08:12:35,529 p=20961 u=ec2-user n=ansible | 172.31.16.58 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.16.58 port 22: No route to host",
+    "unreachable": true
+}
+2024-10-29 08:16:18,533 p=23060 u=ec2-user n=ansible | 172.31.20.238 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.20.238 port 22: No route to host",
+    "unreachable": true
+}
+2024-10-29 08:16:18,535 p=23060 u=ec2-user n=ansible | 172.31.16.58 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.16.58 port 22: No route to host",
+    "unreachable": true
+}
+2024-10-29 08:20:24,498 p=25361 u=ec2-user n=ansible | 172.31.20.26 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2024-10-29 08:20:24,610 p=25361 u=ec2-user n=ansible | 172.31.19.15 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-10-29 17:06:21,793 p=12257 u=ec2-user n=ansible | ERROR! Hosts list cannot be empty. Please check your playbook
+2024-10-29 17:06:58,385 p=12605 u=ec2-user n=ansible | playbook: patch.yml
+2024-10-29 17:07:33,624 p=12850 u=ec2-user n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/ec2-user/ansible-dev/patch.yml': line 9, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        name: '*'
+       state: latest
+       ^ here
+
+2024-10-29 17:08:53,814 p=13439 u=ec2-user n=ansible | playbook: patch.yml
+2024-10-29 17:11:08,048 p=14247 u=ec2-user n=ansible | PLAY [Update and Reboot Servers] ********************************************************************************************************
+2024-10-29 17:11:08,176 p=14247 u=ec2-user n=ansible | TASK [Gathering Facts] ******************************************************************************************************************
+2024-10-29 17:11:16,980 p=14247 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 17:11:16,997 p=14247 u=ec2-user n=ansible | TASK [Update YUM (Red Hat/CentOS)] ******************************************************************************************************
+2024-10-29 17:11:22,039 p=14247 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 17:11:22,050 p=14247 u=ec2-user n=ansible | TASK [Update APT (Debian/Ubuntu)] *******************************************************************************************************
+2024-10-29 17:11:22,068 p=14247 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 17:11:22,090 p=14247 u=ec2-user n=ansible | TASK [Reboot the server] ****************************************************************************************************************
+2024-10-29 17:11:22,129 p=14247 u=ec2-user n=ansible | changed: [172.31.19.15]
+2024-10-29 17:11:22,145 p=14247 u=ec2-user n=ansible | TASK [Wait for server to come back up] **************************************************************************************************
+2024-10-29 17:11:22,806 p=14247 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 17:11:22,829 p=14247 u=ec2-user n=ansible | PLAY RECAP ******************************************************************************************************************************
+2024-10-29 17:11:22,830 p=14247 u=ec2-user n=ansible | 172.31.19.15               : ok=3    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-10-29 17:23:29,710 p=19319 u=ec2-user n=ansible | PLAY [Update and Reboot Servers] ********************************************************************************************************
+2024-10-29 17:23:29,720 p=19319 u=ec2-user n=ansible | TASK [Gathering Facts] ******************************************************************************************************************
+2024-10-29 17:23:31,593 p=19319 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 17:23:31,611 p=19319 u=ec2-user n=ansible | TASK [Update YUM (Red Hat/CentOS)] ******************************************************************************************************
+2024-10-29 17:23:35,607 p=19319 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 17:23:35,619 p=19319 u=ec2-user n=ansible | TASK [Update APT (Debian/Ubuntu)] *******************************************************************************************************
+2024-10-29 17:23:35,653 p=19319 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 17:23:35,662 p=19319 u=ec2-user n=ansible | TASK [Reboot the server] ****************************************************************************************************************
+2024-10-29 17:24:42,261 p=19319 u=ec2-user n=ansible | changed: [172.31.19.15]
+2024-10-29 17:24:42,275 p=19319 u=ec2-user n=ansible | TASK [Wait for server to come back up] **************************************************************************************************
+2024-10-29 17:24:43,025 p=19319 u=ec2-user n=ansible | ok: [172.31.19.15 -> localhost]
+2024-10-29 17:24:43,045 p=19319 u=ec2-user n=ansible | PLAY RECAP ******************************************************************************************************************************
+2024-10-29 17:24:43,046 p=19319 u=ec2-user n=ansible | 172.31.19.15               : ok=4    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-10-29 18:25:46,540 p=10012 u=ec2-user n=ansible | PLAY [Update and Reboot Servers] ***********************************************
+2024-10-29 18:25:46,552 p=10012 u=ec2-user n=ansible | TASK [Gathering Facts] *********************************************************
+2024-10-29 18:25:53,290 p=10012 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 18:25:53,318 p=10012 u=ec2-user n=ansible | TASK [Update YUM (Red Hat/CentOS)] *********************************************
+2024-10-29 18:25:58,976 p=10012 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 18:25:58,984 p=10012 u=ec2-user n=ansible | TASK [Update APT (Debian/Ubuntu)] **********************************************
+2024-10-29 18:25:59,003 p=10012 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 18:25:59,013 p=10012 u=ec2-user n=ansible | TASK [Reboot the server] *******************************************************
+2024-10-29 18:27:04,879 p=10012 u=ec2-user n=ansible | changed: [172.31.19.15]
+2024-10-29 18:27:04,892 p=10012 u=ec2-user n=ansible | TASK [Wait for server to come back up] *****************************************
+2024-10-29 18:27:05,428 p=10012 u=ec2-user n=ansible | ok: [172.31.19.15 -> localhost]
+2024-10-29 18:27:05,456 p=10012 u=ec2-user n=ansible | PLAY RECAP *********************************************************************
+2024-10-29 18:27:05,463 p=10012 u=ec2-user n=ansible | 172.31.19.15               : ok=4    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-10-29 19:30:06,757 p=14032 u=ec2-user n=ansible | ERROR! the role 'java' was not found in /home/ec2-user/ansible-dev/roles:/home/ec2-user/ansible-dev/roles:/home/ec2-user/ansible-dev
+
+The error appears to be in '/home/ec2-user/ansible-dev/site.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - apache
+    - java
+      ^ here
+
+2024-10-29 19:31:12,948 p=14684 u=ec2-user n=ansible | playbook: site.yml
+2024-10-29 19:31:22,720 p=14796 u=ec2-user n=ansible | PLAY [ws] *******************************************************************************************************************************
+2024-10-29 19:31:22,733 p=14796 u=ec2-user n=ansible | TASK [Gathering Facts] ******************************************************************************************************************
+2024-10-29 19:31:29,282 p=14796 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 19:31:29,323 p=14796 u=ec2-user n=ansible | TASK [apache : Install apache] **********************************************************************************************************
+2024-10-29 19:31:35,276 p=14796 u=ec2-user n=ansible | changed: [172.31.19.15]
+2024-10-29 19:31:35,294 p=14796 u=ec2-user n=ansible | TASK [apache : Apache service start] ****************************************************************************************************
+2024-10-29 19:31:36,684 p=14796 u=ec2-user n=ansible | fatal: [172.31.19.15]: FAILED! => {"changed": false, "msg": "Could not find the requested service httpd: host"}
+2024-10-29 19:31:36,686 p=14796 u=ec2-user n=ansible | PLAY RECAP ******************************************************************************************************************************
+2024-10-29 19:31:36,687 p=14796 u=ec2-user n=ansible | 172.31.19.15               : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-29 19:32:36,624 p=15595 u=ec2-user n=ansible | PLAY [ws] *******************************************************************************************************************************
+2024-10-29 19:32:36,635 p=15595 u=ec2-user n=ansible | TASK [Gathering Facts] ******************************************************************************************************************
+2024-10-29 19:32:38,654 p=15595 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 19:32:38,676 p=15595 u=ec2-user n=ansible | TASK [apache : Install apache] **********************************************************************************************************
+2024-10-29 19:32:43,214 p=15595 u=ec2-user n=ansible | changed: [172.31.19.15]
+2024-10-29 19:32:43,244 p=15595 u=ec2-user n=ansible | TASK [apache : Apache service start] ****************************************************************************************************
+2024-10-29 19:32:44,273 p=15595 u=ec2-user n=ansible | fatal: [172.31.19.15]: FAILED! => {"changed": false, "msg": "Could not find the requested service httpd: host"}
+2024-10-29 19:32:44,275 p=15595 u=ec2-user n=ansible | PLAY RECAP ******************************************************************************************************************************
+2024-10-29 19:32:44,275 p=15595 u=ec2-user n=ansible | 172.31.19.15               : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-29 19:40:18,254 p=19894 u=ec2-user n=ansible | PLAY [ws] *******************************************************************************************************************************
+2024-10-29 19:40:18,267 p=19894 u=ec2-user n=ansible | TASK [Gathering Facts] ******************************************************************************************************************
+2024-10-29 19:40:20,269 p=19894 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 19:40:20,282 p=19894 u=ec2-user n=ansible | TASK [apache : Install apache] **********************************************************************************************************
+2024-10-29 19:40:37,421 p=19894 u=ec2-user n=ansible | changed: [172.31.19.15]
+2024-10-29 19:40:37,438 p=19894 u=ec2-user n=ansible | TASK [apache : Apache service start] ****************************************************************************************************
+2024-10-29 19:40:39,160 p=19894 u=ec2-user n=ansible | changed: [172.31.19.15]
+2024-10-29 19:40:39,184 p=19894 u=ec2-user n=ansible | PLAY RECAP ******************************************************************************************************************************
+2024-10-29 19:40:39,184 p=19894 u=ec2-user n=ansible | 172.31.19.15               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-29 19:40:51,219 p=20314 u=ec2-user n=ansible | PLAY [ws] *******************************************************************************************************************************
+2024-10-29 19:40:51,231 p=20314 u=ec2-user n=ansible | TASK [Gathering Facts] ******************************************************************************************************************
+2024-10-29 19:40:53,005 p=20314 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 19:40:53,024 p=20314 u=ec2-user n=ansible | TASK [apache : Install apache] **********************************************************************************************************
+2024-10-29 19:40:57,680 p=20314 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 19:40:57,701 p=20314 u=ec2-user n=ansible | TASK [apache : Apache service start] ****************************************************************************************************
+2024-10-29 19:40:59,051 p=20314 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 19:40:59,077 p=20314 u=ec2-user n=ansible | PLAY RECAP ******************************************************************************************************************************
+2024-10-29 19:40:59,078 p=20314 u=ec2-user n=ansible | 172.31.19.15               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-29 20:31:24,947 p=15909 u=ec2-user n=ansible | Starting galaxy role install process
+2024-10-29 20:31:25,128 p=15909 u=ec2-user n=ansible | - downloading role 'java', owned by geerlingguy
+2024-10-29 20:31:25,442 p=15909 u=ec2-user n=ansible | - downloading role from https://github.com/geerlingguy/ansible-role-java/archive/2.5.0.tar.gz
+2024-10-29 20:31:25,633 p=15909 u=ec2-user n=ansible | - extracting geerlingguy.java to /home/ec2-user/ansible-dev/roles/geerlingguy.java
+2024-10-29 20:31:25,647 p=15909 u=ec2-user n=ansible | - geerlingguy.java (2.5.0) was installed successfully
+2024-10-29 20:35:46,540 p=18304 u=ec2-user n=ansible | Starting galaxy role install process
+2024-10-29 20:35:46,647 p=18304 u=ec2-user n=ansible | - downloading role 'ntp', owned by geerlingguy
+2024-10-29 20:35:46,963 p=18304 u=ec2-user n=ansible | - downloading role from https://github.com/geerlingguy/ansible-role-ntp/archive/2.5.0.tar.gz
+2024-10-29 20:35:47,184 p=18304 u=ec2-user n=ansible | - extracting geerlingguy.ntp to /home/ec2-user/ansible-dev/roles/geerlingguy.ntp
+2024-10-29 20:35:47,190 p=18304 u=ec2-user n=ansible | - geerlingguy.ntp (2.5.0) was installed successfully
+2024-10-29 20:39:09,889 p=20207 u=ec2-user n=ansible | PLAY [ws] *******************************************************************************************************************************
+2024-10-29 20:39:09,921 p=20207 u=ec2-user n=ansible | TASK [Gathering Facts] ******************************************************************************************************************
+2024-10-29 20:39:11,791 p=20207 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 20:39:11,804 p=20207 u=ec2-user n=ansible | TASK [apache : Install apache] **********************************************************************************************************
+2024-10-29 20:39:16,288 p=20207 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 20:39:16,304 p=20207 u=ec2-user n=ansible | TASK [apache : Apache service start] ****************************************************************************************************
+2024-10-29 20:39:17,500 p=20207 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 20:39:17,533 p=20207 u=ec2-user n=ansible | TASK [java : Include OS-specific variables for Fedora or FreeBSD.] **********************************************************************
+2024-10-29 20:39:17,558 p=20207 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 20:39:17,571 p=20207 u=ec2-user n=ansible | TASK [java : Include OS-specific variables for Amazon.] *********************************************************************************
+2024-10-29 20:39:17,605 p=20207 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 20:39:17,616 p=20207 u=ec2-user n=ansible | TASK [java : Include version-specific variables for CentOS/RHEL.] ***********************************************************************
+2024-10-29 20:39:17,655 p=20207 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 20:39:17,670 p=20207 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Ubuntu.] ****************************************************************************
+2024-10-29 20:39:17,702 p=20207 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 20:39:17,713 p=20207 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Debian.] ****************************************************************************
+2024-10-29 20:39:17,738 p=20207 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 20:39:17,762 p=20207 u=ec2-user n=ansible | TASK [java : Define java_packages.] *****************************************************************************************************
+2024-10-29 20:39:17,971 p=20207 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 20:39:17,983 p=20207 u=ec2-user n=ansible | TASK [java : include_tasks] *************************************************************************************************************
+2024-10-29 20:39:18,018 p=20207 u=ec2-user n=ansible | included: /home/ec2-user/ansible-dev/roles/java/tasks/setup-RedHat.yml for 172.31.19.15
+2024-10-29 20:39:18,046 p=20207 u=ec2-user n=ansible | TASK [java : Ensure Java is installed.] *************************************************************************************************
+2024-10-29 20:39:46,530 p=20207 u=ec2-user n=ansible | changed: [172.31.19.15]
+2024-10-29 20:39:46,540 p=20207 u=ec2-user n=ansible | TASK [java : include_tasks] *************************************************************************************************************
+2024-10-29 20:39:46,571 p=20207 u=ec2-user n=ansible | included: /home/ec2-user/ansible-dev/roles/java/tasks/setup-Amazon.yml for 172.31.19.15
+2024-10-29 20:39:46,583 p=20207 u=ec2-user n=ansible | TASK [java : Ensure Java is installed.] *************************************************************************************************
+2024-10-29 22:17:54,599 p=4001 u=ec2-user n=ansible | PLAY [ws] *******************************************************************************************************************************
+2024-10-29 22:17:54,739 p=4001 u=ec2-user n=ansible | TASK [Gathering Facts] ******************************************************************************************************************
+2024-10-29 22:18:03,550 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:03,566 p=4001 u=ec2-user n=ansible | TASK [apache : Install apache] **********************************************************************************************************
+2024-10-29 22:18:08,980 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:09,000 p=4001 u=ec2-user n=ansible | TASK [apache : Apache service start] ****************************************************************************************************
+2024-10-29 22:18:10,107 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:10,132 p=4001 u=ec2-user n=ansible | TASK [java : Include OS-specific variables for Fedora or FreeBSD.] **********************************************************************
+2024-10-29 22:18:10,148 p=4001 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 22:18:10,158 p=4001 u=ec2-user n=ansible | TASK [java : Include OS-specific variables for Amazon.] *********************************************************************************
+2024-10-29 22:18:10,191 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:10,198 p=4001 u=ec2-user n=ansible | TASK [java : Include version-specific variables for CentOS/RHEL.] ***********************************************************************
+2024-10-29 22:18:10,214 p=4001 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 22:18:10,229 p=4001 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Ubuntu.] ****************************************************************************
+2024-10-29 22:18:10,262 p=4001 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 22:18:10,272 p=4001 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Debian.] ****************************************************************************
+2024-10-29 22:18:10,287 p=4001 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 22:18:10,312 p=4001 u=ec2-user n=ansible | TASK [java : Define java_packages.] *****************************************************************************************************
+2024-10-29 22:18:10,515 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:10,526 p=4001 u=ec2-user n=ansible | TASK [java : include_tasks] *************************************************************************************************************
+2024-10-29 22:18:10,554 p=4001 u=ec2-user n=ansible | included: /home/ec2-user/ansible-dev/roles/java/tasks/setup-RedHat.yml for 172.31.19.15
+2024-10-29 22:18:10,576 p=4001 u=ec2-user n=ansible | TASK [java : Ensure Java is installed.] *************************************************************************************************
+2024-10-29 22:18:12,214 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:12,222 p=4001 u=ec2-user n=ansible | TASK [java : include_tasks] *************************************************************************************************************
+2024-10-29 22:18:12,254 p=4001 u=ec2-user n=ansible | included: /home/ec2-user/ansible-dev/roles/java/tasks/setup-Amazon.yml for 172.31.19.15
+2024-10-29 22:18:12,264 p=4001 u=ec2-user n=ansible | TASK [java : Ensure Java is installed.] *************************************************************************************************
+2024-10-29 22:18:13,738 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:13,755 p=4001 u=ec2-user n=ansible | TASK [java : include_tasks] *************************************************************************************************************
+2024-10-29 22:18:13,775 p=4001 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 22:18:13,783 p=4001 u=ec2-user n=ansible | TASK [java : include_tasks] *************************************************************************************************************
+2024-10-29 22:18:13,796 p=4001 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 22:18:13,820 p=4001 u=ec2-user n=ansible | TASK [java : Set JAVA_HOME if configured.] **********************************************************************************************
+2024-10-29 22:18:13,842 p=4001 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 22:18:13,855 p=4001 u=ec2-user n=ansible | TASK [ntp : Include OS-specific variables.] *********************************************************************************************
+2024-10-29 22:18:13,897 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15] => (item=/home/ec2-user/ansible-dev/roles/ntp/vars/RedHat.yml)
+2024-10-29 22:18:13,906 p=4001 u=ec2-user n=ansible | TASK [ntp : Set the ntp_driftfile variable.] ********************************************************************************************
+2024-10-29 22:18:13,941 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:13,951 p=4001 u=ec2-user n=ansible | TASK [ntp : Set the ntp_package variable.] **********************************************************************************************
+2024-10-29 22:18:13,985 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:13,993 p=4001 u=ec2-user n=ansible | TASK [ntp : Set the ntp_config_file variable.] ******************************************************************************************
+2024-10-29 22:18:14,028 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:14,035 p=4001 u=ec2-user n=ansible | TASK [ntp : Set the ntp_daemon variable.] ***********************************************************************************************
+2024-10-29 22:18:14,060 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:14,067 p=4001 u=ec2-user n=ansible | TASK [ntp : Ensure NTP package is installed.] *******************************************************************************************
+2024-10-29 22:18:15,792 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:15,799 p=4001 u=ec2-user n=ansible | TASK [ntp : Ensure tzdata package is installed (Linux).] ********************************************************************************
+2024-10-29 22:18:17,342 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:17,350 p=4001 u=ec2-user n=ansible | TASK [ntp : Set timezone.] **************************************************************************************************************
+2024-10-29 22:18:18,059 p=4001 u=ec2-user n=ansible | changed: [172.31.19.15]
+2024-10-29 22:18:18,073 p=4001 u=ec2-user n=ansible | TASK [ntp : Populate service facts.] ****************************************************************************************************
+2024-10-29 22:18:19,788 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:19,801 p=4001 u=ec2-user n=ansible | TASK [ntp : Disable systemd-timesyncd if it's running but ntp is enabled.] **************************************************************
+2024-10-29 22:18:19,835 p=4001 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 22:18:19,847 p=4001 u=ec2-user n=ansible | TASK [ntp : Ensure NTP is running and enabled as configured.] ***************************************************************************
+2024-10-29 22:18:20,474 p=4001 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-29 22:18:20,487 p=4001 u=ec2-user n=ansible | TASK [ntp : Ensure NTP is stopped and disabled as configured.] **************************************************************************
+2024-10-29 22:18:20,525 p=4001 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 22:18:20,538 p=4001 u=ec2-user n=ansible | TASK [ntp : Generate ntp configuration file.] *******************************************************************************************
+2024-10-29 22:18:20,568 p=4001 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 22:18:20,596 p=4001 u=ec2-user n=ansible | RUNNING HANDLER [ntp : restart cron] ****************************************************************************************************
+2024-10-29 22:18:20,638 p=4001 u=ec2-user n=ansible | skipping: [172.31.19.15]
+2024-10-29 22:18:20,655 p=4001 u=ec2-user n=ansible | PLAY RECAP ******************************************************************************************************************************
+2024-10-29 22:18:20,656 p=4001 u=ec2-user n=ansible | 172.31.19.15               : ok=19   changed=1    unreachable=0    failed=0    skipped=11   rescued=0    ignored=0   
+2024-10-30 21:39:09,227 p=11785 u=ec2-user n=ansible | PLAY [Create users on Ansible managed servers] ***********************************************************************************
+2024-10-30 21:39:09,258 p=11785 u=ec2-user n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2024-10-30 21:39:11,597 p=11785 u=ec2-user n=ansible | ok: [172.31.20.26]
+2024-10-30 21:39:13,280 p=11785 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-30 21:39:13,295 p=11785 u=ec2-user n=ansible | TASK [Ensure user is present] ****************************************************************************************************
+2024-10-30 21:39:14,216 p=11785 u=ec2-user n=ansible | changed: [172.31.20.26]
+2024-10-30 21:39:14,440 p=11785 u=ec2-user n=ansible | fatal: [172.31.19.15]: FAILED! => {"changed": false, "msg": "Group sudo does not exist"}
+2024-10-30 21:39:14,454 p=11785 u=ec2-user n=ansible | PLAY RECAP ***********************************************************************************************************************
+2024-10-30 21:39:14,454 p=11785 u=ec2-user n=ansible | 172.31.19.15               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-30 21:39:14,454 p=11785 u=ec2-user n=ansible | 172.31.20.26               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-30 21:41:21,411 p=12632 u=ec2-user n=ansible | PLAY [Create users on Ansible managed servers] ***********************************************************************************
+2024-10-30 21:41:21,425 p=12632 u=ec2-user n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2024-10-30 21:41:23,757 p=12632 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-30 21:41:23,773 p=12632 u=ec2-user n=ansible | TASK [Ensure user is present] ****************************************************************************************************
+2024-10-30 21:41:25,094 p=12632 u=ec2-user n=ansible | changed: [172.31.19.15]
+2024-10-30 21:41:25,112 p=12632 u=ec2-user n=ansible | PLAY RECAP ***********************************************************************************************************************
+2024-10-30 21:41:25,112 p=12632 u=ec2-user n=ansible | 172.31.19.15               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-30 22:03:00,136 p=21358 u=ec2-user n=ansible | PLAY [Create multiple users on Ansible managed servers] *********************************************************************************
+2024-10-30 22:03:00,154 p=21358 u=ec2-user n=ansible | TASK [Gathering Facts] ******************************************************************************************************************
+2024-10-30 22:03:02,064 p=21358 u=ec2-user n=ansible | ok: [172.31.20.26]
+2024-10-30 22:03:02,500 p=21358 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-30 22:03:02,529 p=21358 u=ec2-user n=ansible | TASK [Ensure multiple users are present] ************************************************************************************************
+2024-10-30 22:03:02,632 p=21358 u=ec2-user n=ansible | fatal: [172.31.19.15]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'groups'\n\nThe error appears to be in '/home/ec2-user/ansible-dev/multi-users.yml': line 11, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Ensure multiple users are present\n      ^ here\n"}
+2024-10-30 22:03:02,656 p=21358 u=ec2-user n=ansible | fatal: [172.31.20.26]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'groups'\n\nThe error appears to be in '/home/ec2-user/ansible-dev/multi-users.yml': line 11, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Ensure multiple users are present\n      ^ here\n"}
+2024-10-30 22:03:02,658 p=21358 u=ec2-user n=ansible | PLAY RECAP ******************************************************************************************************************************
+2024-10-30 22:03:02,658 p=21358 u=ec2-user n=ansible | 172.31.19.15               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-30 22:03:02,658 p=21358 u=ec2-user n=ansible | 172.31.20.26               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-30 22:03:57,047 p=21800 u=ec2-user n=ansible | PLAY [Create multiple users on Ansible managed servers] *********************************************************************************
+2024-10-30 22:03:57,058 p=21800 u=ec2-user n=ansible | TASK [Gathering Facts] ******************************************************************************************************************
+2024-10-30 22:03:58,896 p=21800 u=ec2-user n=ansible | ok: [172.31.19.15]
+2024-10-30 22:03:59,468 p=21800 u=ec2-user n=ansible | ok: [172.31.20.26]
+2024-10-30 22:03:59,494 p=21800 u=ec2-user n=ansible | TASK [Ensure multiple users are present] ************************************************************************************************
+2024-10-30 22:04:00,292 p=21800 u=ec2-user n=ansible | changed: [172.31.20.26] => (item={'name': 'qa-user', 'password': '$6$tRAYCiz7omYTR44e$pD6rZu.c9yaFZE6C4ToC3JctkkJOiaTIQt8ZlvuaGgSwFoe2Ny7p2jaiAie.apNaxnEbnxIm2XMnbzu.rWOHQ/'})
+2024-10-30 22:04:00,454 p=21800 u=ec2-user n=ansible | changed: [172.31.19.15] => (item={'name': 'qa-user', 'password': '$6$GxBWIKgViHbg2qO8$bVYC5JAN/y.MNFWWOdVaiTYD/3tk4SE0F9OnzW36JoVQCW2SgcDIBlEzEbnDwwW1gqhr7LMApyhm1yQoipVFB.'})
+2024-10-30 22:04:00,784 p=21800 u=ec2-user n=ansible | changed: [172.31.20.26] => (item={'name': 'prod-user', 'password': '$6$hDkEhzo6dEbgz3mc$u.KtoO0wD.zL5bc6xy4ATtgk.GSEt18vmigb83GavyaRI7St.M7X5dxZ.DZ63oxcgL9lszN86QJaog0xK61hm/'})
+2024-10-30 22:04:01,070 p=21800 u=ec2-user n=ansible | changed: [172.31.19.15] => (item={'name': 'prod-user', 'password': '$6$LD/JZ8XAiKrBA882$GJFuRDk7ufXlfsodq3063VtrMm4rfiwrfT4jUcwGsUofRPYl3MsoRXtpWqtp144zclD37qnHwTAcqLFh10evF1'})
+2024-10-30 22:04:01,207 p=21800 u=ec2-user n=ansible | changed: [172.31.20.26] => (item={'name': 'dev-user', 'password': '$6$kHOsTk/DerDhJryK$qDuM4GhPeNBkk71tL9Eb3pYH8yceuTXLKdrzmCEi1iKLlZ3JWjUr842iFTynbVX3sq95GH9UQCWxSp0UFLWBQ.'})
+2024-10-30 22:04:02,057 p=21800 u=ec2-user n=ansible | changed: [172.31.19.15] => (item={'name': 'dev-user', 'password': '$6$M8yHqFX9xw87ivWW$kYZCFOHSYpv8B4nLj3aBB/9L90Ih/rUt.o2jAmBCZMbo5TiVkl4ds7.ZcvNd9/TUECiA4E1N.Y40efdWoOE2g1'})
+2024-10-30 22:04:02,121 p=21800 u=ec2-user n=ansible | PLAY RECAP ******************************************************************************************************************************
+2024-10-30 22:04:02,121 p=21800 u=ec2-user n=ansible | 172.31.19.15               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-30 22:04:02,122 p=21800 u=ec2-user n=ansible | 172.31.20.26               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
